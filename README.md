@@ -6,6 +6,7 @@
 ![Status](https://img.shields.io/badge/Project-Active-success)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
+
 **Author:** Sultan Mahmood  
 **Focus:** Oracle 19c Performance Engineering | SQL Optimization | Cost-Based Optimizer Analysis
 
@@ -26,6 +27,18 @@ It demonstrates real-world performance engineering using:
 This is not theoretical tuning — it is measurable performance engineering.
 
 ---
+
+## Professional Positioning
+
+This repository represents structured enterprise-level performance engineering practices,
+demonstrating advanced Oracle 19c tuning capabilities with measurable results.
+
+It serves as a technical portfolio artifact showcasing:
+- Cost-Based Optimizer expertise
+- Execution plan analysis
+- Index strategy design
+- Logical I/O reduction methodology
+- Evidence-based performance validation
 
 ## Demonstrated Performance Impact
 
