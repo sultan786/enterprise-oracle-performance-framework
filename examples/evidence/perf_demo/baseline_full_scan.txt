@@ -1,0 +1,3 @@
+TABLE ACCESS FULL ORDERS
+Buffers = 9776
+A-Time = 0.22
