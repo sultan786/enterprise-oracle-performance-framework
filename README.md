@@ -1,24 +1,75 @@
 # Enterprise Oracle Performance Optimization Framework (Oracle 19c)
 
-A production-oriented toolkit for diagnosing, analyzing, and improving Oracle Database performance in enterprise environments.
+**Author:** Sultan Mahmood  
+**Focus:** Oracle 19c Performance Engineering | SQL Optimization | Cost-Based Optimizer Analysis
 
-## Scope
-- Target: Oracle Database 19c
-- Focus: SQL performance diagnostics, plan inspection, safe tuning workflow, and audit-friendly logging
+## Overview
 
-## Repository structure
-- `sql/diagnostics` : read-only scripts (top SQL, waits, blocking, stats health)
-- `sql/plans`       : plan inspection helpers (DBMS_XPLAN)
-- `sql/maintenance` : controlled maintenance scripts (stats, index guidance)
-- `plsql/logging`   : structured tuning logs (before/after + change summary)
-- `docs/`           : methodology & architecture
-- `examples/`       : demo runbook & reproducible cases
+This project provides a structured, evidence-driven methodology for analyzing and optimizing SQL performance in Oracle Database 19c.
 
-## Quick start
-1. Connect to your PDB service (e.g., `ORCLPDB`)
-2. Run diagnostic scripts in `sql/diagnostics`
-3. Use `plsql/logging` to record before/after tuning evidence
-4. Capture a runbook in `examples/runbook.md`
+It demonstrates real-world performance engineering using:
 
-## Author
-Sultan Mahmood
+- Execution plan analysis (DBMS_XPLAN)
+- Runtime statistics (ALLSTATS LAST)
+- Cost-Based Optimizer behavior analysis
+- Predicate selectivity impact
+- Index design strategy
+- Logical I/O measurement
+- Before vs After benchmarking
+
+This is not theoretical tuning — it is measurable performance engineering.
+
+---
+
+## Demonstrated Performance Impact
+
+### PERF_DEMO Case Study (Oracle 19c)
+
+| Metric | Baseline | Tuned | Improvement |
+|---------|----------|--------|------------|
+| Logical I/O (Buffers) | 9776 | 1693 | ↓ 83% |
+| Execution Time | 0.22s | 0.05s | ↓ 77% |
+| Access Path | Full Table Scan | Index Range Scan | Optimized |
+
+### What Changed?
+
+- Created composite index (status, order_date, customer_id)
+- Analyzed predicate selectivity
+- Observed optimizer access path shift
+- Verified measurable logical I/O reduction
+
+---
+
+## Framework Methodology
+
+### 1️⃣ Identify Expensive SQL
+- Query V$SQL
+- Capture SQL_ID
+- Analyze execution statistics
+
+### 2️⃣ Capture Runtime Execution Plan
+- Enable statistics_level = ALL
+- Use gather_plan_statistics hint
+- Extract plan with DBMS_XPLAN.DISPLAY_CURSOR(... 'ALLSTATS LAST')
+
+### 3️⃣ Measure Baseline
+- Logical reads (Buffers)
+- Actual execution time
+- Rows processed
+- Access path
+
+### 4️⃣ Apply Tuning Strategy
+- Index design
+- Predicate optimization
+- Join method evaluation
+- Cardinality analysis
+
+### 5️⃣ Re-measure and Compare
+- Capture new execution plan
+- Calculate logical I/O reduction
+- Quantify performance improvement
+
+---
+
+## Project Structure
+
