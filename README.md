@@ -1,5 +1,11 @@
 # Enterprise Oracle Performance Optimization Framework (Oracle 19c)
 
+![Oracle](https://img.shields.io/badge/Oracle-19c-red)
+![Performance Engineering](https://img.shields.io/badge/Focus-Performance%20Engineering-blue)
+![SQL Optimization](https://img.shields.io/badge/SQL-Optimization-green)
+![Status](https://img.shields.io/badge/Project-Active-success)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 **Author:** Sultan Mahmood  
 **Focus:** Oracle 19c Performance Engineering | SQL Optimization | Cost-Based Optimizer Analysis
 
